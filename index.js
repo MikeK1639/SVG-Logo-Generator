@@ -16,8 +16,7 @@ function writeToFile(fileName, answers) {
   svgString += "<g>";
  
   svgString += `${answers.shape}`;
-
-  // Conditional takes users input from choices array and then adds polygon properties and shape color to SVG string
+// this is a conditional that takes the user choices and adds them to the polygonal array
   let shapeChoice;
   if (answers.shape === "Triangle") {
     shapeChoice = new Triangle();
@@ -72,7 +71,7 @@ function promptUser() {
       {
         type: "input",
         message:
-          "Choose shapes color. Use either color name or hexidecimal #", 
+          "Choose shapes bacground color. Use either color name or hexidecimal #", 
         name: "shapeBackgroundColor",
       },
     ])
