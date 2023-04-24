@@ -3,7 +3,7 @@ const inquirer = require("inquirer");
 
 const fs = require("fs");
 
-const { Triangle, Square, Circle } = require("./lib/sha");
+const { Triangle, Square, Circle } = require("./lib/shapes.js");
 
 // Function writes the SVG file 
 function writeToFile(fileName, answers) {
@@ -83,7 +83,7 @@ function promptUser() {
         promptUser();
       } else {
         // Calling write file function to generate SVG file
-        writeToFile("logo.svg", answers);
+        writeToFile("output/logo.svg", answers);
       }
     });
 }
